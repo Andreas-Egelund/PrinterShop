@@ -6,5 +6,13 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+
+    @foreach(var priner in Model.ourPrinters.Values)
+    {
+        <div>
+            <h2>@priner.Name</h2>
+            <p>@priner.Description</p>
+        </div>
+    }
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

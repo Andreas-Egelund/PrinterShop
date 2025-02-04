@@ -1,11 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PrinterShop.Data;
+using PrinterShop.Models;
 
 namespace PrinterShop.Pages
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+
+        public Dictionary<string,Printer> ourPrinters = MockData.GetPrinters();
+
+
 
         public IndexModel(ILogger<IndexModel> logger)
         {
