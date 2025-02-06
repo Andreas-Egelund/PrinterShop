@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PrinterShop.Data;
 using PrinterShop.Models;
+using System.Net;
 
 namespace PrinterShop.Pages
 {
@@ -9,7 +10,6 @@ namespace PrinterShop.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public Dictionary<string,Printer> ourPrinters = MockData.GetPrinters();
 
 
 
@@ -22,5 +22,8 @@ namespace PrinterShop.Pages
         {
 
         }
+
+        
+
     }
 }
