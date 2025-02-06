@@ -11,11 +11,11 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             @foreach (var printer in Model.Printers2D)
             {
-                string Imagepath = "/Images/Printer3D/" + printer.Name.ToLower() + ".png";
+                string Imagepath2d = "/images/Printer2D/" + printer.Name.ToLower() + ".png";
 
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="@Imagepath" alt="Card image cap">
+                    <img class="card-img-top" src="@Imagepath2d" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">@printer.Name</h5>
                             <p class="card-text">@printer.Description</p>

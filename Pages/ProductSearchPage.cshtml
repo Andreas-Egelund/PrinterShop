@@ -8,19 +8,19 @@
     <div class="container">
         <!-- Corrected row and gutter spacing -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            @foreach (var printer in Model.Results)
+            @foreach (var product in Model.Results)
             {
-                string Imagepath = "/Images/Printer3D/" + printer.Name.ToLower() + ".png";
-
+                string Imagepath = "/Images/Allimages/" + product.Name.ToLower() + ".png";
+    
                 <div class="col">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="@Imagepath" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">@printer.Name</h5>
-                            <p class="card-text">@printer.Description</p>
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text">@product.Description</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Price @printer.Price</li>
+                            <li class="list-group-item">Price @product.Price</li>
                             <li class="list-group-item">Dapibus ac facilisis in</li>
                             <li class="list-group-item">Vestibulum at eros</li>
                         </ul>
@@ -31,6 +31,7 @@
                     </div>
                 </div>
             }
+           
         </div>
     </div>
 }

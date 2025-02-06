@@ -7,16 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Images\Allimages\hp100.png" />
     <Content Remove="wwwroot\Images\Printer3D\hp100.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Services\" />
-    <Folder Include="wwwroot\Images\Accessories\" />
-    <Folder Include="wwwroot\Images\Printer2D\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Images\Allimages\hp100.png" />
     <None Include="wwwroot\Images\Printer3D\hp100.png" />
   </ItemGroup>
 
