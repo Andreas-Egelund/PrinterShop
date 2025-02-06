@@ -9,7 +9,6 @@ namespace PrinterShop.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public Dictionary<string,Printer> ourPrinters = MockData.GetPrinters();
 
 
 
