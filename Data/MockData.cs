@@ -1,4 +1,5 @@
-﻿using PrinterShop.Models;
+﻿using PrinterShop.InterFace;
+using PrinterShop.Models;
 
 namespace PrinterShop.Data
 {
@@ -7,7 +8,7 @@ namespace PrinterShop.Data
 
 
 
-        static readonly Dictionary<string, Printer> Printers2D = new Dictionary<string, Printer>()
+        static readonly Dictionary<string, IProduct> Printers2D = new Dictionary<string, IProduct>()
         {
             {"HP100",new Printer("HP100","2d",3000.00) },
             {"HP200",new Printer("HP200","2d",3000.00) },
@@ -16,7 +17,7 @@ namespace PrinterShop.Data
             {"HP500",new Printer("HP500","2d",3000.00) }
         };
 
-        static readonly Dictionary<string, Printer> Printers3D = new Dictionary<string, Printer>()
+        static readonly Dictionary<string, IProduct> Printers3D = new Dictionary<string, IProduct>()
         {
             {"HP100",new Printer("HP100","3d",3000.00) },
             {"HP200",new Printer("HP200","3d",3000.00) },
@@ -26,7 +27,7 @@ namespace PrinterShop.Data
         };
 
 
-        static readonly Dictionary<string, Accessories> Accessories = new Dictionary<string, Accessories>()
+        static readonly Dictionary<string, IProduct> Accessories = new Dictionary<string, IProduct>()
         {
             {"HP101",new Accessories("HP100","Accessory",3000.00) },
             {"HP201",new Accessories("HP100","Accessory",3000.00) },
@@ -39,17 +40,17 @@ namespace PrinterShop.Data
 
 
 
-        public static Dictionary<string,Printer> Get2DPrinters()
+        public static Dictionary<string, IProduct> Get2DPrinters()
         {
             return Printers2D;
         }
 
-        public static Dictionary<string, Printer> Get3DPrinters()
+        public static Dictionary<string, IProduct> Get3DPrinters()
         {
             return Printers3D;
         }
 
-        public static Dictionary<string, Accessories> GetAccessories()
+        public static Dictionary<string, IProduct> GetAccessories()
         {
             return Accessories;
         }

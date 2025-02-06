@@ -15,7 +15,6 @@ namespace PrinterShop.Pages.ProductPages
 
         public void OnGet()
         {
-            Printers3D = MockData.Get3DPrinters();
         }
     }
 }
