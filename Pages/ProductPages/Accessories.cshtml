@@ -1,14 +1,13 @@
 ﻿@page
-@model PrinterShop.Pages.ProductSearchPageModel
+@model PrinterShop.Pages.ProductPages.AccessoriesModel
 @{
 }
 
-@if (Model.Results != null)
-{
+
     <div class="container">
         <!-- Corrected row and gutter spacing -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            @foreach (var printer in Model.Results)
+            @foreach (var printer in Model.Accessories)
             {
                 string Imagepath = "/Images/Printer3D/" + printer.Name.ToLower() + ".png";
 
@@ -33,5 +32,3 @@
             }
         </div>
     </div>
-}
-

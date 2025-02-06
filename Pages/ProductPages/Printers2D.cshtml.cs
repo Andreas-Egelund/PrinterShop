@@ -6,10 +6,10 @@ using PrinterShop.Models;
 
 namespace PrinterShop.Pages.ProductPages
 {
-    public class Printers3DModel : PageModel
+    public class Printers2DModel : PageModel
     {
 
-        public List<IProduct> Printers3D = MockData.Get3DPrinters().Values.ToList();
+        public List<IProduct> Printers2D = MockData.Get2DPrinters().Values.ToList();
 
 
 

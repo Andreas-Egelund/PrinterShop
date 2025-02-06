@@ -4,30 +4,32 @@
 }
 
 
-@foreach(var printer in Model.Printers3D.Values)
-{
 
+    <div class="container">
+        <!-- Corrected row and gutter spacing -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            @foreach (var printer in Model.Printers3D)
+            {
+                string Imagepath = "/Images/Printer3D/" + printer.Name.ToLower() + ".png";
 
-
-    
-    string Imagepath = "/Images/Printer3D/" + printer.Name.ToLower() + ".png";
-
-
-    <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="@Imagepath" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="@Imagepath" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@printer.Name</h5>
+                            <p class="card-text">@printer.Description</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price @printer.Price</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-    <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-    </div>
-</div>
-}
