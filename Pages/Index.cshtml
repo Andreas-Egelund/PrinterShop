@@ -9,9 +9,11 @@
 
     @foreach(var priner in Model.ourPrinters.Values)
     {
-        <div>
-            <h2>@priner.Name</h2>
-            <p>@priner.Description</p>
+
+        <div class="card-body">
+            <h2>Name: @priner.Name</h2>
+            <p>Description: @priner.Description</p>
+            <p>Price: @priner.Price</p>
         </div>
     }
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
