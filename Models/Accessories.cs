@@ -2,30 +2,21 @@
 
 namespace PrinterShop.Models
 {
-    public class Printer:IProduct
+    public class Accessories:IProduct
     {
 
 
-        public Printer(string name, string description, double price)
+        public Accessories(string name, string description, double price)
         {
             Name = name;
             Description = description;
             Price = price;
+
         }
 
-
-
-
         public string Name { get; set; }
-
         public string Description { get; set; }
-
         public double Price { get; set; }
-
-
-
-
-
 
 
     }
