@@ -20,3 +20,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.custom-carousel {
+    max-width: 600px; /* Reduce the width */
+    max-height: 500px; /* Reduce the height */
+    margin: 0 auto; /* Center the carousel */
+}
+
+    .custom-carousel img {
+        height: 500px;
+        width: 100%;
+        object-fit: contain; /* Show the whole image without cropping */
+        background-color: #f8f9fa; /* Optional: Add a background color for the blank areas */
+    }

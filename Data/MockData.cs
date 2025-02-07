@@ -10,11 +10,11 @@ namespace PrinterShop.Data
 
         static readonly Dictionary<string, IProduct> Printers2D = new Dictionary<string, IProduct>()
         {
-            {"HP1010",new Printer("HP1010","2d",3000.00) },
-            {"HP2020",new Printer("HP2020","2d",3000.00) },
-            {"HP3030",new Printer("HP3030","2d",3000.00) },
-            {"HP4040",new Printer("HP4040","2d",3000.00) },
-            {"HP5050",new Printer("HP5050","2d",3000.00) }
+            {"HP1012",new Printer("HP1012","2d",3000.00) },
+            {"HP2022",new Printer("HP2022","2d",3000.00) },
+            {"HP3032",new Printer("HP3032","2d",3000.00) },
+            {"HP4042",new Printer("HP4042","2d",3000.00) },
+            {"HP5052",new Printer("HP5052","2d",3000.00) }
         };
 
         static readonly Dictionary<string, IProduct> Printers3D = new Dictionary<string, IProduct>()
