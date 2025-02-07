@@ -10,20 +10,20 @@ namespace PrinterShop.Data
 
         static readonly Dictionary<string, IProduct> Printers2D = new Dictionary<string, IProduct>()
         {
-            {"HP1012",new Printer("HP1012","2d",3000.00) },
-            {"HP2022",new Printer("HP2022","2d",3000.00) },
-            {"HP3032",new Printer("HP3032","2d",3000.00) },
-            {"HP4042",new Printer("HP4042","2d",3000.00) },
-            {"HP5052",new Printer("HP5052","2d",3000.00) }
+            {"2D100",new Printer("2D100","Canon PIXMA","2d",400.00) },
+            {"2D101",new Printer("2D101","OfficeJet Pro","2d",2000.00) },
+            {"2D102",new Printer("2D102","HP Officejet Pro","2d",1500.00) },
+            {"2D103",new Printer("2D103","Canon PIXMA PRO","2d",3500.00) },
+            {"2D104",new Printer("2D104","HP LaserJet Pro","2d",1500.00) }
         };
 
         static readonly Dictionary<string, IProduct> Printers3D = new Dictionary<string, IProduct>()
         {
-            {"HP100",new Printer("HP100","3d",3000.00) },
-            {"HP200",new Printer("HP200","3d",3000.00) },
-            {"HP300",new Printer("HP300","3d",3000.00) },
-            {"HP400",new Printer("HP400","3d",3000.00) },
-            {"HP500",new Printer("HP500","3d",3000.00) }
+            {"3D100",new Printer("3D100","Open Box","3d",3400.00) },
+            {"3D101",new Printer("3D101","Tronxy 2 Pro","3d",1600.00) },
+            {"3D102",new Printer("3D102","Creality K1","3d",4250.00) },
+            {"3D103",new Printer("3D103","AnkerMake M5","3d",3000.00) },
+            {"3D104",new Printer("3D104","Finder 3","3d",2260.00) }
         };
 
 
@@ -31,12 +31,13 @@ namespace PrinterShop.Data
 
         static readonly Dictionary<string, IProduct> Accessories = new Dictionary<string, IProduct>()
         {
-            {"HP101",new Accessories("HP101","Accessory",3000.00) },
-            {"HP201",new Accessories("HP201","Accessory",3000.00) },
-            {"HP301",new Accessories("HP301","Accessory",3000.00) },
-            {"HP401",new Accessories("HP401","Accessory",3000.00) },
-            {"HP501",new Accessories("HP501","Accessory",3000.00) },
-            {"HP601",new Accessories("HP601","Accessory",3000.00) },
+            
+            {"AC100",new Accessories("AC100","XL color printer ink","Accessory",369.00) },
+            {"AC101",new Accessories("AC101","XL printer ink","Accessory",289.00) },
+            {"AC102",new Accessories("AC102","Epson-102 4 stk","Accessory",329.00) },
+            {"AC103",new Accessories("AC103","Royal filament","Accessory",85.00) },
+            {"AC104",new Accessories("AC104","3D-printer værktøjssæt","Accessory",230.00) },
+            {"AC105",new Accessories("AC105","3D printer engine","Accessory",150.00) },
 
         };
 

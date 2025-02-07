@@ -29,9 +29,11 @@ namespace PrinterShop.Pages
         {
             if (!string.IsNullOrEmpty(SearchTerm))
             {
+                
                 Results = AllProducts
-                    .Where(p => p.Name.Contains(SearchTerm, System.StringComparison.OrdinalIgnoreCase))
-                    .ToList();
+                .Where(p => p.Name.Contains(SearchTerm, System.StringComparison.OrdinalIgnoreCase) ||
+                            p.Description.Contains(SearchTerm, System.StringComparison.OrdinalIgnoreCase))
+                .ToList();
             }
         }
 

@@ -11,7 +11,7 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             @foreach (var printer in Model.Printers2D)
             {
-                string Imagepath2d = "/images/Printer2D/" + printer.Name.ToLower() + ".png";
+            string Imagepath2d = "/images/Printer2D/" + printer.ProductId.ToLower() + ".png";
 
                 <div class="col">
                     <div class="card" style="width: 18rem;">

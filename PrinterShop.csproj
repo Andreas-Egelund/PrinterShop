@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\Images\Allimages\hp100.png" />
-    <Content Remove="wwwroot\Images\Printer3D\hp100.png" />
+    <Content Remove="wwwroot\Images\Allimages\3D100.png" />
+    <Content Remove="wwwroot\Images\Printer3D\3D100.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\Images\Allimages\hp100.png" />
-    <None Include="wwwroot\Images\Printer3D\hp100.png" />
+    <None Include="wwwroot\Images\Allimages\3D100.png" />
+    <None Include="wwwroot\Images\Printer3D\3D100.png" />
   </ItemGroup>
 
 </Project>

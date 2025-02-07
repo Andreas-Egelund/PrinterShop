@@ -9,7 +9,8 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         @foreach (var accessories in Model.Accessories)
             {
-            string ImagepathAccessories = "/Images/Accessories/" + accessories.Name.ToLower() + ".png";
+            string ImagepathAccessories = "/Images/Accessories/" + accessories.ProductId.ToLower() + ".png";
+
 
                 <div class="col">
                     <div class="card" style="width: 18rem;">

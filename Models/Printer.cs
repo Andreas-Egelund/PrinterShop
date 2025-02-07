@@ -6,11 +6,12 @@ namespace PrinterShop.Models
     {
 
 
-        public Printer(string name, string description, double price)
+        public Printer(string productId, string name, string description, double price)
         {
             Name = name;
             Description = description;
             Price = price;
+            ProductId = productId;
         }
 
 
@@ -21,6 +22,8 @@ namespace PrinterShop.Models
         public string Description { get; set; }
 
         public double Price { get; set; }
+
+        public string ProductId { get; set; }
 
 
 
