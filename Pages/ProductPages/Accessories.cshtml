@@ -3,7 +3,8 @@
 @{
 }
 
-
+<form method="post">
+    
     <div class="container">
         <!-- Corrected row and gutter spacing -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -25,11 +26,12 @@
                             <li class="list-group-item">Vestibulum at eros</li>
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <button type="submit" name="KurvKnappen" value="@accessories.ProductId" class="btn btn-outline-primary" asp-page-handler="TilKurv">Tilføj</button>
                         </div>
                     </div>
                 </div>
             }
         </div>
     </div>
+</form>
+

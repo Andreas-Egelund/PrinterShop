@@ -11,6 +11,8 @@ namespace PrinterShop.Pages
         public List<IProduct> AllProducts = new List<IProduct>();
 
 
+
+
         public ProductSearchPageModel()
         {
             AllProducts.AddRange(MockData.Get2DPrinters().Values);
@@ -36,6 +38,8 @@ namespace PrinterShop.Pages
                 .ToList();
             }
         }
+
+
 
     }
 }
