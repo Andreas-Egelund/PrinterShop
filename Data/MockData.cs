@@ -5,6 +5,16 @@ namespace PrinterShop.Data
 {
     public static class MockData
     {
+        static readonly Dictionary<string, User> UserDict = new Dictionary<string, User>()
+        {
+            {"andreas@mail.com", new User("Andreas","andreas@mail.com","andreasPass")},
+            {"klivan@mail.com", new User("Klivan", "klivan@mail.com","klivanPass")},
+            {"jyde@mail.com", new User("Jyde", "jyde@mail.com", "jydePass")},
+            {"bylle@mail.com", new User("Bylle", "bylle@mail.com", "byllePass")},
+            {"bertil@mail.com", new User("Bertil", "bertil@mail.com", "bertilPass")},
+            {"Guest", new User()}
+
+        };
 
 
 
@@ -59,7 +69,10 @@ namespace PrinterShop.Data
         }
 
 
-
+        public static Dictionary<string, User> GetUsers()
+        {
+            return UserDict;
+        }
 
 
 

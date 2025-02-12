@@ -26,7 +26,11 @@
                             <li class="list-group-item">Vestibulum at eros</li>
                         </ul>
                         <div class="card-body">
-                            <button type="submit" name="KurvKnappen" value="@accessories.ProductId" class="btn btn-outline-primary" asp-page-handler="TilKurv">Tilføj</button>
+                            <form method="post">
+                                <button type="submit" name="selectedProductId" value="@accessories.ProductId" class="btn btn-outline-primary" asp-page-handler="AddToCart">
+                                    Tilføj
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

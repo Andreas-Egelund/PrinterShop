@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using PrinterShop.Data;
 using PrinterShop.InterFace;
 using PrinterShop.Models;
+using PrinterShop.Services;
 using System.Net;
 
 namespace PrinterShop.Pages
@@ -11,21 +12,28 @@ namespace PrinterShop.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public List<IProduct> Printers3D = MockData.Get3DPrinters().Values.ToList();
+
+        public Dictionary<string,IProduct> Printers3D;
 
 
 
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger, PrinterService printerService)
         {
             _logger = logger;
+            Printers3D = printerService.Get3DPrinters();
         }
+
+
+
+        public string UserName { get; set; }
+
 
         public void OnGet()
         {
+            UserName = HttpContext.Session.GetString("UserName") ?? "Guest";
         }
 
-        
 
     }
 }

@@ -10,6 +10,19 @@
 </div>
 
 
+<h2>Welcome, @Model.UserName!</h2>
+
+@if (Model.UserName == "Guest")
+{
+    <p>You are browsing as a guest. <a href="/LoginSite">Log in</a> for more features.</p>
+}
+else
+{
+    <p>Thanks for logging in,  CurrentUser.Name == @Model.UserName!</p>
+    <form id="logoutForm" asp-page="/Logout" method="post">
+        <button type="submit" class="btn btn-link">Logout</button>
+    </form>
+}
 
 
 <div id="carouselExampleInterval" class="carousel slide custom-carousel" data-bs-ride="carousel">
@@ -17,7 +30,7 @@
         <div class="carousel-item active" data-bs-interval="2500">
             <img src="~/Images/Printer2D/2D100.png" class="d-block w-100" alt="...">
         </div>
-        @foreach (var item in Model.Printers3D)
+        @foreach (var item in Model.Printers3D.Values)
         {
             var imagepath = item.ProductId + ".png";
             <div class="carousel-item" data-bs-interval="2500">

@@ -24,9 +24,13 @@
                             <li class="list-group-item">Dapibus ac facilisis in</li>
                             <li class="list-group-item">Vestibulum at eros</li>
                         </ul>
-                        <div class="card-body">
-                        <button type="submit" name="EditedEventId" value="" class="btn btn-outline-primary" asp-page-handler="RemoveEvent">Tilføj</button>
-                        </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <button type="submit" name="selectedProductId" value="@printer.ProductId" class="btn btn-outline-primary" asp-page-handler="AddToCart">
+                                Tilføj
+                            </button>
+                        </form>
+                    </div>
                     </div>
                 </div>
             }

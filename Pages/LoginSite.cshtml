@@ -2,21 +2,50 @@
 @model PrinterShop.Pages.LoginSiteModel
 @{
 }
-<div class="text-center">
-    <h1 class="display-4">Login</h1>
-</div>
-<div class="text-center">
-    <form>
-        <div class="form-group">
-            <label class="text-center" for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" style="width: 75%; margin: auto;" placeholder="Enter email">
-        </div>
 
-        <div class="form-group">
-            <label class="text-center" for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" style="width: 75%; margin: auto;" placeholder="Password">
-        </div>
+<div class="row justify-content-center">
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div class="col-lg-4 col-md-5 col-sm-6 mx-3 my-3 p-4 border rounded shadow">
+        <h2>Opret Bruger</h2>
+
+        <form method="post" asp-page-handler="CreateUser">
+            <div class="form-group">
+                <label>Brugernavn</label>
+                <input type="text" name="name" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-secondary w-100">Opret</button>
+        </form>
+    </div>
+
+
+    <div class="col-lg-4 col-md-5 col-sm-6 mx-3 my-3 p-4 border rounded shadow">
+        <h2>Login</h2>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger">@Model.ErrorMessage</div>
+        }
+
+        <form method="post" asp-page-handler="Login">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+    </div>
+
+
 </div>

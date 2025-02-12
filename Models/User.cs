@@ -5,8 +5,12 @@ namespace PrinterShop.Models
     public class User
     {
 
+        public User()
+        {
+            ShoppingCart = new List<IProduct>();
+            Receipts = new List<List<IProduct>>();
+        }
 
-      
 
         public User(string name, string email, string password)
         {
