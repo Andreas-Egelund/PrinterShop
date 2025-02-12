@@ -1,0 +1,98 @@
+﻿@page
+@model PrinterShop.Pages.CheckOutModel
+@{
+}
+
+
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-4 col-md-5 col-sm-6 mx-3 my-3 p-4 border rounded shadow">
+        
+        <div class="container my-5">
+            <h2 class="mb-4">Payment Information</h2>
+            <form method="post">
+                <div class="mb-3">
+                    <label for="cardholderName" class="form-label">Cardholder Name</label>
+                    <input type="text" class="form-control" id="cardholderName" name="cardholderName" placeholder="John Doe" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cardNumber" class="form-label">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="expirationDate" class="form-label">Expiration Date</label>
+                        <input type="text" class="form-control" id="expirationDate" name="expirationDate" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                    </div>
+                </div>
+
+                <button type="submit" asp-page-handler="SubmitPayment" class="btn btn-primary w-100">Submit Payment</button>
+            </form>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="col-lg-4 col-md-5 col-sm-6 mx-3 my-3 p-4 border rounded shadow">
+
+
+        <div class="container my-5">
+            <div class="receipt border rounded p-4 bg-light shadow-sm">
+                <h2 class="text-center mb-4">Order Receipt</h2>
+
+                <!-- Order Details -->
+                <div class="mb-3">
+                    <strong>Order Number:</strong> #123456 <br />
+                    <strong>Date:</strong> February 12, 2025 <br />
+                    @if(Model.CurrentUser.Name != null)
+                    {
+                    <strong>Customer:</strong> @Model.CurrentUser.Name
+                    }
+                </div>
+
+                <hr />
+
+                <!-- Itemized List -->
+                <div class="item-list mb-4">
+
+                    @foreach (var product in Model.CurrentUser.ShoppingCart)
+                    {
+                        <div class="d-flex justify-content-between">
+                            <span>@product.Name</span>
+                            <span>$@product.Price</span>
+                        </div>
+                    }
+                </div>
+
+                <hr />
+
+                <!-- Total Section -->
+                <div class="d-flex justify-content-between">
+                    <span><strong>Total:</strong></span>
+                    <span class="text-success"><strong>$@Model.Total</strong></span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+</div>

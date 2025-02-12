@@ -1,0 +1,46 @@
+﻿@page
+@model PrinterShop.Pages.UserInfoPageModel
+@{
+}
+
+@foreach(var receipt in Model.CurrentUser.Receipts)
+{
+<div class="col-lg-4 col-md-5 col-sm-6 mx-3 my-3 p-4 border rounded shadow">
+
+
+    <div class="container my-5">
+        <div class="receipt border rounded p-4 bg-light shadow-sm">
+            <h2 class="text-center mb-4">Order Receipt</h2>
+
+            <!-- Order Details -->
+            <div class="mb-3">
+                <strong>Order Number:</strong> #@receipt.RecieptId <br />
+                <strong>Date:</strong> @DateTime.Now <br />
+                <strong>Customer:</strong> @Model.CurrentUser.Name
+            </div>
+
+            <hr />
+
+            <!-- Itemized List -->
+            <div class="item-list mb-4">
+
+                @foreach (var product in receipt.AllItems)
+                {
+                    <div class="d-flex justify-content-between">
+                        <span>@product.Name</span>
+                        <span>$@product.Price</span>
+                    </div>
+                }
+            </div>
+
+            <hr />
+
+            <!-- Total Section -->
+            <div class="d-flex justify-content-between">
+                <span><strong>Total:</strong></span>
+                <span class="text-success"><strong>$60000000</strong></span>
+            </div>
+        </div>
+    </div>
+</div>
+}

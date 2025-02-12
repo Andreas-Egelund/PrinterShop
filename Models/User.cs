@@ -8,7 +8,7 @@ namespace PrinterShop.Models
         public User()
         {
             ShoppingCart = new List<IProduct>();
-            Receipts = new List<List<IProduct>>();
+            Receipts = new List<Reciept>();
         }
 
 
@@ -18,14 +18,14 @@ namespace PrinterShop.Models
             Email = email;
             Password = password;
             ShoppingCart = new List<IProduct>();
-            Receipts = new List<List<IProduct>>();
+            Receipts = new List<Reciept>();
         }
 
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public List<IProduct> ShoppingCart { get; set; }
-        public List<List<IProduct>> Receipts { get; set; }
+        public List<Reciept> Receipts { get; set; }
 
 
 
