@@ -43,6 +43,22 @@ namespace PrinterShop.Pages.ProductPages
         }
 
 
+
+        public IActionResult OnPostTilProductSide(string id)
+        {
+            Printers3D = MockData.Get3DPrinters().Values.ToList();
+            var printer = Printers3D.Find(p => p.ProductId == id);
+
+            if (printer != null)
+            {
+                ProductSiteModel.AddingProducts(printer);
+            }
+
+            return RedirectToPage("/ProductSite");
+        }
+
+
+
         public void OnGet()
         {
         }
