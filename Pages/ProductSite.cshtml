@@ -1,0 +1,29 @@
+﻿@page
+@model PrinterShop.Pages.ProductSiteModel
+@{
+}
+
+@foreach (var product in Model.TheProducts)
+{
+    string Imagepath = "/Images/Allimages/" + product.ProductId.ToLower() + ".png";
+
+    <form method="post">
+        <div style="display: flex; align-items: center; gap: 50px;">
+            <img src="@Imagepath" alt="Card image cap" style="width: 400px; height: auto;">
+
+            <div>
+                <h5>@product.Name</h5>
+                <p>@product.Description</p>
+                <p>Price: @product.Price</p>
+
+                <div>
+                    <button type="submit" name="id" value="@product.ProductId" class="btn btn-outline-primary" asp-page-handler="TilProductSide">Tilføj Til Kruv</button>
+                </div>
+                <div style="-webkit-border-top-right-radius">
+                    <button type="submit" name="id" value="@product.ProductId" class="btn btn-outline-danger" asp-page-handler="RemoveProduct">+</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+}

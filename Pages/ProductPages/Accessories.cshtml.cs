@@ -40,7 +40,20 @@ namespace PrinterShop.Pages.ProductPages
             }
         }
 
+        public IActionResult OnPostTilProductSide(string id)
+        {
+            Accessories = MockData.GetAccessories().Values.ToList();
 
+            var accessor = Accessories.Find(p => p.ProductId == id);
+
+
+            if (accessor != null)
+            {
+                ProductSiteModel.AddingProducts(accessor);
+            }
+
+            return RedirectToPage("/ProductSite");
+        }
 
 
 
